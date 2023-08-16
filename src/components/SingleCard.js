@@ -1,8 +1,10 @@
-const  SingleCard= ({card , the_back, handle_choices, flipped}) => {
+const  SingleCard= ({card , the_back, handle_choices, flipped, disable}) => {
 
 
   const handle_click = () => {
-    handle_choices(card);
+    if(!disable){
+      handle_choices(card);
+    }
   }
 
   return ( 
